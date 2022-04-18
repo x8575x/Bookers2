@@ -4,14 +4,14 @@
 
     <table class="table">
       <tbody>
-        <tr></tr>
+        <tr><%= image_tag @user.get_image %></tr>
         <tr>
           <th>name</th>
-          <th>Kanae</th>
+          <th><%= @user.name %></th>
         </tr>
         <tr>
           <th>introduction</th>
-          <th></th>
+          <th><%= @user.introduction %></th>
         </tr>
       </tbody>
     </table>
