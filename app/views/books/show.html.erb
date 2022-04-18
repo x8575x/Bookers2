@@ -5,16 +5,22 @@
       <%= render 'user_info.html.erb' %>
 
       <div class="col-md-8 offset-md-1">
-  		<h2>Book detail</h2>
-  		<table class="table">
-  		  <tbody><tr>
-  		    <!--<td>ユーザーリンク</td>-->
-  		    <td><%= @book_show.user.name %></td>
-  		    <td><%= link_to @book_show.title, book_path(@book_show.id) %></td>
+  		  <h2>Book detail</h2>
+  		  <table class="table">
+  		    <tbody>
+  		      <tr>
+  		        <!--<td>ユーザーリンク</td>-->
+  		        <td><%= @book_show.user.name %></td>
+  		        <td><%= link_to @book_show.title, book_path(@book_show.id) %></td>
+              <td><%= @book_show.body %></td>
 
-          <td><%= @book_show.body %></td>
-        </tr>
-      </tbody></table>
-    </div>
+  		        <% if @book.user == current_user %>
+                <%= link_to "Edit", edit_book_path(@book), class: "btn btn-sm btn-success edit_book_2464", method: :patch %>
+                <%= link_to "Destroy", book_path(@book), class: "btn btn-sm btn-danger destroy_book_2464",method: :delete %>
+              <% end %>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
