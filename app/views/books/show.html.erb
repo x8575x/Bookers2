@@ -14,9 +14,9 @@
   		        <td><%= link_to @book_show.title, book_path(@book_show.id) %></td>
               <td><%= @book_show.body %></td>
 
-  		        <% if @book.user == current_user %>
-                <%= link_to "Edit", edit_book_path(@book), class: "btn btn-sm btn-success edit_book_2464", method: :patch %>
-                <%= link_to "Destroy", book_path(@book), class: "btn btn-sm btn-danger destroy_book_2464",method: :delete %>
+  		        <% if @book_show.user == current_user %>
+                <td><%= link_to "Edit", edit_book_path(@book_show.id), class: "btn btn-sm btn-success edit_book_2464" %></td>
+                <td><%= link_to "Destroy", book_path(@book_show), class: "btn btn-sm btn-danger destroy_book_2464", method: :delete, "data-confirm" => "本当に消しますか？" %></td>
               <% end %>
             </tr>
           </tbody>
