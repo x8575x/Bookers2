@@ -1,8 +1,20 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+
 <p id="notice"></p>
-  <div class="container px-5 px-sm-0">
+  <div class="container">
     <div class="row">
-      <%= render 'user_info.html.erb', books: @books %>
+      <%= render 'user_info.html.erb' %>
+
+      <div class="col-md-8 offset-md-1">
+  		<h2>Book detail</h2>
+  		<table class="table">
+  		  <tbody><tr>
+  		    <!--<td>ユーザーリンク</td>-->
+  		    <td><%= @book_show.user.name %></td>
+  		    <td><%= link_to @book_show.title, book_path(@book_show.id) %></td>
+
+          <td><%= @book_show.body %></td>
+        </tr>
+      </tbody></table>
+    </div>
     </div>
   </div>

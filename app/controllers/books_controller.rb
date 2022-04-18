@@ -9,13 +9,13 @@ class BooksController < ApplicationController
 
 
   def index
-    @book = Book.new
     @books = Book.all
-    # @profile_image = @user.profile_image
+    # @user = User.find(params[:id])
   end
 
+
   def show
-    @book = Book.find(params[:id])
+    @book_show = Book.find(params[:id])
   end
 
 
