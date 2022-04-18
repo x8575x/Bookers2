@@ -16,4 +16,5 @@ class User < ApplicationRecord
     profile_image
   end
 
+
 end
