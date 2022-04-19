@@ -17,8 +17,8 @@
   </table>
 
   <div class="row">
-    <%= link_to root_path, class: 'btn btn-outline-secondary btn-block' do %>
-      <i class="fas fa-user-cog"></i>
+    <%= link_to edit_user_path(current_user.id), class: 'btn btn-outline-secondary btn-block' do %>
+        <i class="fas fa-user-cog"></i>
     <% end %>
   </div>
 
